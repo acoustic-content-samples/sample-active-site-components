@@ -5,7 +5,6 @@ This repository contains some active sample site components to showcase how to i
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
-- [Demo (Internal Link - will be removed before publishing)](#demo-internal-link-will-be-removed-before-publishing)
 - [Prerequisites](#prerequisites)
 - [Install and deploy the sample](#install-and-deploy-the-sample)
   - [Download the packages](#download-the-packages)
@@ -23,9 +22,6 @@ This repository contains some active sample site components to showcase how to i
 
 ## Introduction
 This sample repository provides three example plugin components for your Oslo sites. It includes Youtube component, Chart component, and Iframe component. With the Youtube component, you can embed your favorite Youtube videos in your Oslo sites. With the Chart component, you can create your own chart based on your customized data by ng2-charts library. With the Iframe component, you can display any websites in a customized iframe window. To enable these 3 components, you have to install package `content-artifacts` and package `site-application-files` by following the steps below.
-
-## Demo (Internal Link - will be removed before publishing)
-https://dch-dxcloud.rtp.raleigh.ibm.com/c76770d7-f6d1-48b0-adde-fac60aec0f19/
 
 ## Prerequisites
 * A WCH tenant in Trial or Standard Tier 
