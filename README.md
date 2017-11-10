@@ -45,19 +45,8 @@ This sample repository provides three example plugin components for your Oslo si
 npm install
 npm install ng2-charts --save
 ```
-#### Option 1 - Download and Install from Git Repo
-* Find your SSH key of sample-active-site-components repo, i.e. `https://github.ibm.com/DX/sample-active-site-components.git`
-* In your Oslo project's root directory, run this command to install package site-application-files
-```
-npm run download-install-layouts <SSH kEY OF sample-active-site-components repo> .
-```
-
-#### Option 2 - Install from local zip package
-* Find your aboslute path for your sample-active-site-components.zip, i.e. `/Users/YOUR USERNAME/Documents/sample-active-site-components.zip`
-* In your Oslo project's root directory, run this command to install package site-application-files
-```
-npm run install-layouts <ABSOLUTE PATH OF sample-active-site-components.zip> 
-```
+#### Copy sample source files
+Run `npm run install-layouts-from-folder <ABSOLUTE PATH OF sample-active-site-components DIRECTORY>` . This script will copy over the content from the `site-application-files` directory and overlay them into the Oslo application. Then it will use ibm-wch-sdk-cli to register the layouts in the Oslo application.
 `Note: In the install process, you may be prompted to enter your WCH tenant username and password to confirm certain install steps`
 
 ### Build and Deploy your components
