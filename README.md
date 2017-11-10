@@ -56,7 +56,7 @@ From within the wch-site-application run `npm run install-layouts-from-folder <A
 
 ## Edit your content in WCH
 * Go to Your WCH homepage -> Content -> My Content and assets. You will see our sample content there.
-![sample content](https://github.ibm.com/DX/sample-active-site-components/blob/master/doc/images/content.png)
+![sample content](./doc/images/content.png)
 * Click on one of contents. You would see our preset values in content. If you want to use your customized value in content, please click on "Create draft" to edit the content.
 * For details about the meaning of each value in sample content, please refer to Appendix tutorial.
 
