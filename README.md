@@ -46,7 +46,7 @@ npm install
 npm install ng2-charts --save
 ```
 #### Copy sample source files
-Run `npm run install-layouts-from-folder <ABSOLUTE PATH OF sample-active-site-components DIRECTORY>` . This script will copy over the content from the `site-application-files` directory and overlay them into the Oslo application. Then it will use ibm-wch-sdk-cli to register the layouts in the Oslo application.
+From within the wch-site-application run `npm run install-layouts-from-folder <ABSOLUTE PATH OF sample-active-site-components DIRECTORY>` . This script will copy over the content from the `site-application-files` directory and overlay them into the Oslo application. Then it will use ibm-wch-sdk-cli to register the layouts in the Oslo application.
 `Note: In the install process, you may be prompted to enter your WCH tenant username and password to confirm certain install steps`
 
 ### Build and Deploy your components
