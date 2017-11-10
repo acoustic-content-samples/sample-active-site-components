@@ -1,0 +1,42 @@
+{
+  "id": "7b4d6587-3cfe-46d0-9249-b0a689aa98eb",
+  "rev": "1-3d19b3322f684477b9fdc73fea153d59",
+  "name": "Iframe",
+  "classification": "content-type",
+  "kind": [
+    "standalone"
+  ],
+  "description": "",
+  "creator": "Adam.iem",
+  "creatorId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "created": "2017-10-11T17:52:32.250Z",
+  "lastModifier": "Adam.iem",
+  "lastModifierId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "lastModified": "2017-10-11T18:32:33.393Z",
+  "status": "ready",
+  "tags": [],
+  "elements": [
+    {
+      "elementType": "link",
+      "label": "source",
+      "key": "source",
+      "required": true
+    },
+    {
+      "elementType": "number",
+      "fieldType": "integer",
+      "label": "width",
+      "key": "width",
+      "minimum": 0,
+      "required": true
+    },
+    {
+      "elementType": "number",
+      "fieldType": "integer",
+      "label": "height",
+      "key": "height",
+      "minimum": 0,
+      "required": true
+    }
+  ]
+}

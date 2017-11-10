@@ -1,0 +1,30 @@
+{
+  "id": "7b12d8ff-a820-435b-837d-1120490ced2d",
+  "rev": "1-54833ea7be15de111762f03195bb9232",
+  "name": "doughnut",
+  "creatorId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "creator": "Adam.iem",
+  "classification": "category",
+  "taxonomy": "7cac8b4b-db7d-4243-8d7b-6458af55cb5d",
+  "parent": "7cac8b4b-db7d-4243-8d7b-6458af55cb5d",
+  "ancestorIds": [
+    "7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+  ],
+  "namePath": [
+    "Graph",
+    "doughnut"
+  ],
+  "links": {
+    "taxonomy": {
+      "href": "/authoring/v1/categories/7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+    },
+    "self": {
+      "href": "/authoring/v1/categories/7b12d8ff-a820-435b-837d-1120490ced2d"
+    },
+    "parent": {
+      "href": "/authoring/v1/categories/7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+    }
+  },
+  "created": "2017-10-11T18:33:31.219Z",
+  "lastModified": "2017-10-11T18:33:31.219Z"
+}

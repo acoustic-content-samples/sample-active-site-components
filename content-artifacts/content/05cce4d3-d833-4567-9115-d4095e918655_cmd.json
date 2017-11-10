@@ -1,0 +1,42 @@
+{
+  "id": "05cce4d3-d833-4567-9115-d4095e918655",
+  "name": "Iframe example",
+  "classification": "content",
+  "typeId": "7b4d6587-3cfe-46d0-9249-b0a689aa98eb",
+  "locale": "en",
+  "lastModified": "2017-10-11T18:32:35.505Z",
+  "lastModifierId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "created": "2017-10-11T18:32:35.505Z",
+  "creatorId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "tags": [],
+  "keywords": [],
+  "status": "ready",
+  "elements": {
+    "source": {
+      "elementType": "link",
+      "linkURL": "https://www.ibm.com/",
+      "linkText": "IBM Homepage"
+    },
+    "width": {
+      "elementType": "number",
+      "value": 800
+    },
+    "height": {
+      "elementType": "number",
+      "value": 800
+    }
+  },
+  "selectedLayouts": [
+    {
+      "layout": {
+        "id": "iframe-layout"
+      }
+    }
+  ],
+  "kind": [],
+  "description": "",
+  "type": "Iframe",
+  "creator": "Adam.iem",
+  "lastModifier": "Adam.iem",
+  "rev": "1-794822a82353fbe3166ad66bff9f926f"
+}

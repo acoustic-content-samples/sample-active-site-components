@@ -1,0 +1,38 @@
+{
+  "id": "b03e2589-5b2a-453d-93c2-f134e3ec7f19",
+  "name": "Chart Example",
+  "description": "",
+  "classification": "content",
+  "typeId": "2d1fd75c-6e5f-4d89-8cce-b50df45e080e",
+  "locale": "en",
+  "lastModified": "2017-10-11T18:33:42.911Z",
+  "lastModifierId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "created": "2017-10-11T18:33:42.911Z",
+  "creatorId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "tags": [],
+  "keywords": [],
+  "status": "ready",
+  "elements": {
+    "type": {
+      "elementType": "category",
+      "categoryIds": [
+        "e5f8479d-bc49-4727-b4a5-c972c6e302f7"
+      ],
+      "categories": [
+        "Graph/radar"
+      ]
+    }
+  },
+  "selectedLayouts": [
+    {
+      "layout": {
+        "id": "chart-layout"
+      }
+    }
+  ],
+  "kind": [],
+  "type": "Chart",
+  "creator": "Adam.iem",
+  "lastModifier": "Adam.iem",
+  "rev": "1-46bb54030d9619b34c614e46ae4efbd7"
+}

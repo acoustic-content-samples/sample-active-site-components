@@ -1,0 +1,36 @@
+{
+  "id": "1b4c2eaa-5f69-487c-937a-d0cad56d346c",
+  "name": "Youtube video - IBM Watson Content Hub",
+  "description": "",
+  "classification": "content",
+  "typeId": "4801b520-3b10-4763-ac3c-288dc52b63b3",
+  "locale": "en",
+  "lastModified": "2017-10-11T18:34:20.221Z",
+  "lastModifierId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "created": "2017-10-11T18:34:20.221Z",
+  "creatorId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "tags": [],
+  "keywords": [],
+  "status": "ready",
+  "elements": {
+    "videoid": {
+      "elementType": "text",
+      "value": "DC4dRht4Z9c"
+    },
+    "showyoutubelogo": {
+      "elementType": "toggle"
+    }
+  },
+  "selectedLayouts": [
+    {
+      "layout": {
+        "id": "youtube-layout"
+      }
+    }
+  ],
+  "kind": [],
+  "type": "Youtube",
+  "creator": "Adam.iem",
+  "lastModifier": "Adam.iem",
+  "rev": "1-4a44ce7fe60c779a2897aaca8ff56737"
+}

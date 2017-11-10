@@ -1,0 +1,30 @@
+{
+  "id": "e5f8479d-bc49-4727-b4a5-c972c6e302f7",
+  "rev": "1-b18a21b398bdb80b4d0bf8a65a900e75",
+  "name": "radar",
+  "creatorId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "creator": "Adam.iem",
+  "classification": "category",
+  "taxonomy": "7cac8b4b-db7d-4243-8d7b-6458af55cb5d",
+  "parent": "7cac8b4b-db7d-4243-8d7b-6458af55cb5d",
+  "ancestorIds": [
+    "7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+  ],
+  "namePath": [
+    "Graph",
+    "radar"
+  ],
+  "links": {
+    "taxonomy": {
+      "href": "/authoring/v1/categories/7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+    },
+    "self": {
+      "href": "/authoring/v1/categories/e5f8479d-bc49-4727-b4a5-c972c6e302f7"
+    },
+    "parent": {
+      "href": "/authoring/v1/categories/7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+    }
+  },
+  "created": "2017-10-11T18:33:37.188Z",
+  "lastModified": "2017-10-11T18:33:37.188Z"
+}

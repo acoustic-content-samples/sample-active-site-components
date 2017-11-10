@@ -1,0 +1,16 @@
+.ytcomponent
+{
+		text-align: center;
+		padding-top: 35px;
+		overflow: hidden;
+}
+.video-container
+{
+	padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+	width: 100%;
+	max-height: 405px;
+	max-width: 720px;
+}

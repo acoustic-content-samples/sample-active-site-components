@@ -1,0 +1,24 @@
+{
+  "id": "youtube-layout-mapping",
+  "rev": "1-3b1a1e6cdc0a16a0f5aadee2731fdc11",
+  "name": "youtubeLayoutMapping",
+  "classification": "layout-mapping",
+  "type": {
+    "id": "4801b520-3b10-4763-ac3c-288dc52b63b3",
+    "name": "Youtube"
+  },
+  "mappings": [
+    {
+      "defaultLayout": {
+        "id": "youtube-layout",
+        "name": "youtubeLayout"
+      },
+      "layouts": [
+        {
+          "id": "youtube-layout",
+          "name": "youtubeLayout"
+        }
+      ]
+    }
+  ]
+}

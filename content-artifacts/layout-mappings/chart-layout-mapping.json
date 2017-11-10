@@ -1,0 +1,24 @@
+{
+  "id": "chart-layout-mapping",
+  "rev": "1-a904f706da7c1115c3cf9c061b367394",
+  "name": "chartLayoutMapping",
+  "classification": "layout-mapping",
+  "type": {
+    "id": "2d1fd75c-6e5f-4d89-8cce-b50df45e080e",
+    "name": "Chart"
+  },
+  "mappings": [
+    {
+      "defaultLayout": {
+        "id": "chart-layout",
+        "name": "chartLayout"
+      },
+      "layouts": [
+        {
+          "id": "chart-layout",
+          "name": "chartLayout"
+        }
+      ]
+    }
+  ]
+}

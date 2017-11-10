@@ -1,0 +1,6 @@
+<div class="iframe-component" [id]="(onRenderingContext | async).id">
+	<h2>Iframe component example</h2>
+	<iframe class="wch-iframe" [src]="source.linkURL | formattedText:'resourceUrl'" [width]="width" [height]="height">
+		Sorry, your browser does not support inline frames.
+	</iframe>
+</div>

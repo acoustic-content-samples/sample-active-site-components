@@ -1,0 +1,30 @@
+{
+  "id": "0862b5c2-01c6-4226-bc24-9c85c0db234a",
+  "rev": "1-aadfd51594901c57f69d26169017a896",
+  "name": "polarArea",
+  "creatorId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "creator": "Adam.iem",
+  "classification": "category",
+  "taxonomy": "7cac8b4b-db7d-4243-8d7b-6458af55cb5d",
+  "parent": "7cac8b4b-db7d-4243-8d7b-6458af55cb5d",
+  "ancestorIds": [
+    "7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+  ],
+  "namePath": [
+    "Graph",
+    "polarArea"
+  ],
+  "links": {
+    "taxonomy": {
+      "href": "/authoring/v1/categories/7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+    },
+    "self": {
+      "href": "/authoring/v1/categories/0862b5c2-01c6-4226-bc24-9c85c0db234a"
+    },
+    "parent": {
+      "href": "/authoring/v1/categories/7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+    }
+  },
+  "created": "2017-10-11T18:33:26.118Z",
+  "lastModified": "2017-10-11T18:33:26.118Z"
+}

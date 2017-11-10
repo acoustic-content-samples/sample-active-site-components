@@ -1,0 +1,12 @@
+{
+  "id": "iframe-layout",
+  "rev": "1-aac969821e57d75596b3b854bfd60323",
+  "name": "iframeLayout",
+  "classification": "layout",
+  "prerender": false,
+  "thumbnail": {
+    "path": "/layouts/thumbnails/iframe-layout.jpg"
+  },
+  "template": "iframe-layout",
+  "templateType": "angular"
+}

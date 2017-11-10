@@ -1,0 +1,32 @@
+{
+  "id": "4801b520-3b10-4763-ac3c-288dc52b63b3",
+  "rev": "1-25971fd8c75a3c144a3628148438c067",
+  "name": "Youtube",
+  "classification": "content-type",
+  "kind": [
+    "standalone"
+  ],
+  "description": "",
+  "creator": "Adam.iem",
+  "creatorId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "created": "2017-10-09T15:35:48.244Z",
+  "lastModifier": "Adam.iem",
+  "lastModifierId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "lastModified": "2017-10-11T18:34:18.114Z",
+  "status": "ready",
+  "tags": [],
+  "elements": [
+    {
+      "elementType": "text",
+      "label": "videoID",
+      "key": "videoid",
+      "required": true,
+      "minLength": 1
+    },
+    {
+      "elementType": "toggle",
+      "label": "showYoutubeLogo",
+      "key": "showyoutubelogo"
+    }
+  ]
+}

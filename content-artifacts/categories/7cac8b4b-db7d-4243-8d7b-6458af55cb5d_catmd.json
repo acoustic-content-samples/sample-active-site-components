@@ -1,0 +1,21 @@
+{
+  "id": "7cac8b4b-db7d-4243-8d7b-6458af55cb5d",
+  "rev": "1-53b67e9953f96ac17cec31ce1e935a39",
+  "name": "Graph",
+  "creatorId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "creator": "Adam.iem",
+  "classification": "taxonomy",
+  "firstClassFor": [
+    ""
+  ],
+  "namePath": [
+    "Graph"
+  ],
+  "links": {
+    "self": {
+      "href": "/authoring/v1/categories/7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+    }
+  },
+  "created": "2017-10-11T18:33:23.497Z",
+  "lastModified": "2017-10-11T18:33:23.497Z"
+}

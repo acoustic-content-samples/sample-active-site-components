@@ -1,0 +1,30 @@
+{
+  "id": "f964312b-f4fb-4552-aad0-6414c2462d3d",
+  "rev": "1-b14416711ec9aab2937fc7501c56186a",
+  "name": "line",
+  "creatorId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "creator": "Adam.iem",
+  "classification": "category",
+  "taxonomy": "7cac8b4b-db7d-4243-8d7b-6458af55cb5d",
+  "parent": "7cac8b4b-db7d-4243-8d7b-6458af55cb5d",
+  "ancestorIds": [
+    "7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+  ],
+  "namePath": [
+    "Graph",
+    "line"
+  ],
+  "links": {
+    "taxonomy": {
+      "href": "/authoring/v1/categories/7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+    },
+    "self": {
+      "href": "/authoring/v1/categories/f964312b-f4fb-4552-aad0-6414c2462d3d"
+    },
+    "parent": {
+      "href": "/authoring/v1/categories/7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+    }
+  },
+  "created": "2017-10-11T18:33:39.623Z",
+  "lastModified": "2017-10-11T18:33:39.623Z"
+}

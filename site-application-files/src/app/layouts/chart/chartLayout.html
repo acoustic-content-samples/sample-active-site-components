@@ -1,0 +1,24 @@
+<div class="chart-component">
+	<div [id]="(onRenderingContext | async).id" class="row">
+		<h2>Sample Radar Chart - Chart.js</h2>
+		<div class="chart" style="display: block;">
+			<canvas baseChart width="400" height="400"
+											[datasets]="chartData"
+											[labels]="chartLabels"
+											[options]="chartOptions"
+											[legend]="chartLegend"
+											[chartType]="chartType"
+											(chartClick)="chartClicked($event)"></canvas>
+		</div>
+		<div class="table-container" style="overflow-x:auto;">
+			<table class="table table-responsive table-condensed">
+				<tr>
+					<th *ngFor="let label of chartLabels">{{label}}</th>
+				</tr>
+				<tr *ngFor="let d of chartData">
+					<td *ngFor="let label of chartLabels; let j=index">{{d && d.data[j]}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

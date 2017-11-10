@@ -1,0 +1,24 @@
+{
+  "id": "iframe-layout-mapping",
+  "rev": "1-1c428c5a7f1b7a0c15e059c2cd25b989",
+  "name": "iframeLayoutMapping",
+  "classification": "layout-mapping",
+  "type": {
+    "id": "7b4d6587-3cfe-46d0-9249-b0a689aa98eb",
+    "name": "Iframe"
+  },
+  "mappings": [
+    {
+      "defaultLayout": {
+        "id": "iframe-layout",
+        "name": "iframeLayout"
+      },
+      "layouts": [
+        {
+          "id": "iframe-layout",
+          "name": "iframeLayout"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "chart-layout",
+  "rev": "1-fa8b383e01f8a09ebfb0b7a11abfc45c",
+  "name": "chartLayout",
+  "classification": "layout",
+  "prerender": false,
+  "thumbnail": {
+    "path": "/layouts/thumbnails/chart-layout.jpg"
+  },
+  "template": "chart-layout",
+  "templateType": "angular"
+}

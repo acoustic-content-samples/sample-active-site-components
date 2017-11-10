@@ -1,0 +1,12 @@
+{
+  "id": "youtube-layout",
+  "rev": "1-8f2d7160199879fd1f71898c09df8a29",
+  "name": "youtubeLayout",
+  "classification": "layout",
+  "prerender": false,
+  "thumbnail": {
+    "path": "/layouts/thumbnails/youtube-layout.jpg"
+  },
+  "template": "youtube-layout",
+  "templateType": "angular"
+}

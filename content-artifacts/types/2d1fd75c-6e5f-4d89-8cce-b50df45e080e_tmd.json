@@ -1,0 +1,28 @@
+{
+  "id": "2d1fd75c-6e5f-4d89-8cce-b50df45e080e",
+  "rev": "1-cfcc83bca4987fb7e460edc6bf334491",
+  "name": "Chart",
+  "classification": "content-type",
+  "kind": [
+    "standalone"
+  ],
+  "description": "",
+  "creator": "Adam.iem",
+  "creatorId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "created": "2017-10-09T14:26:59.295Z",
+  "lastModifier": "Adam.iem",
+  "lastModifierId": "3cffae4d-0dc8-4c36-b71b-41aec171141b",
+  "lastModified": "2017-10-11T18:33:41.358Z",
+  "status": "ready",
+  "tags": [],
+  "elements": [
+    {
+      "elementType": "category",
+      "label": "type",
+      "key": "type",
+      "restrictedParents": [
+        "7cac8b4b-db7d-4243-8d7b-6458af55cb5d"
+      ]
+    }
+  ]
+}
