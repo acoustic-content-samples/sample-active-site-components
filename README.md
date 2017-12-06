@@ -34,32 +34,26 @@ You could see what example plugin components look like here:
 ![iframe example](/doc/images/iframe_example.png)
 
 ## Prerequisites
-* A WCH tenant in Trial or Standard Tier 
+* A WCH tenant in Trial or Standard Tier
 * Latest wch-site-application source (see: https://github.com/ibm-wch/wch-site-application)
 * Wchtools-cli v2.0.3 or above
 * Node.js v6.11.1 or above  
 
 ## Install and deploy the sample
-### Download the packages
-* Clone or download this repository. In each package, the 3 components are included. 
-### Configure your Wchtools 
+
+### Configure your Wchtools
 * Get your WCH tenant API URL. Go to your WCH homepage -> YOUR USERNAME tab on top bar -> Hub information -> API URL. Copy the URL.
 * Run `wchtools init` in your command line. Enter your username and API URL to configure the wchtools
-### Install the package content-artifacts
-* Change your directory to `sample-active-site-components/content-artifacts`. 
-* In your command line, run `wchtools push -A -v`. Enter your WCH password after it prompts you to enter the password. 
-* After you see `Push modified complete. Pushed ** artifacts successfully.`, the package content-artifacts are installed successfully. You can log into your WCH tenant to see that new Contents, Content types, Taxonomies, and Pages are installed in your tenant.
-### Install the package site-application-files
-* Change your directory to your Oslo project's root directory (i.e. wch-site-application) and run these commands to install all required npm packages for your site. 
+
+### Clone and install the sample content-artifacts and site-application-files
+* Change the command line directory to site application's root directory (i.e. wch-site-application). If you haven't already done so, perform all of the required installation steps for the site application repo.
+* Using the Git URL to the sample-web-components repository, run this command to copy the needed sample site-application-files and update the layout settings for the new component.
 ```
-npm install
-npm install ng2-charts --save
+npm run install-layouts-from-git https://github.com/ibm-wch/wch-site-application.git
 ```
-#### Copy sample source files
-From within the wch-site-application run `npm run install-layouts-from-folder <ABSOLUTE PATH OF sample-active-site-components DIRECTORY>` . This script will copy over the content from the `site-application-files` directory and overlay them into the Oslo application. Then it will use ibm-wch-sdk-cli to register the layouts in the Oslo application.
-`Note: In the install process, you may be prompted to enter your WCH tenant username and password to confirm certain install steps`
 
 ### Build and Deploy your components
+* From within the wch-site-application directory run:
 * Run `npm run build` to compile the project. Make sure there is no error during the build process.
 * Run `npm run deploy` to your WCH tenant. After that, you can see your changes in your WCH live site.
 
@@ -83,14 +77,14 @@ From within the wch-site-application run `npm run install-layouts-from-folder <A
 2. Create a new content type named "Youtube" in WCH. Create elements under type "Text" in "Element palette" labeled as "videoID", and under type "Toggle" in "Element palette" labeled as "showYoutubeLogo".
 The type should look like in this way:
 ![youtube type](/doc/images/youtube.png)
-3. Create new content with the "Youtube" content type. In the "videoID" field, input your video ID from Step1. "showYoutubeLogo" would define whether the official "Youtube" logo shows up in your customized player. 
+3. Create new content with the "Youtube" content type. In the "videoID" field, input your video ID from Step1. "showYoutubeLogo" would define whether the official "Youtube" logo shows up in your customized player.
 4. Create a layout in your Oslo project. In the root directory of your Oslo site, run the following commands to configure your WCH tenant info and create a layout with type "Youtube":
 ```
 wchtools init
 npm run create-layout -- --type "Youtube"
 ```
 5. Deploy your newly created layout to WCH tenant. After you created your layout locally, you have to deploy it to WCH make it live. In the root directory of your Oslo site, run `npm run build-deploy`
-6. Create a new page that contains the new layout. In your "Site manager" of your WCH site, add a "Standard page" named "Video" with content you created in Step 3. 
+6. Create a new page that contains the new layout. In your "Site manager" of your WCH site, add a "Standard page" named "Video" with content you created in Step 3.
 7. Implement your code in newly created component. In `src/app/layouts/youtube/youtubeLayout.html`, replace the original code with following code:
 ```
 <div class="ytcomponent" [id]="(onRenderingContext | async).id">
@@ -165,14 +159,14 @@ export const SAMPLE_MODULE = [
 3. Create a new Taxonomy that contains chart type. Chart.js supports 6 different chart types. By creating a new Taxonomy named "graph", you can manage your chart type in your WCH tenant. Go to Your WCH Homepage -> Content Model -> Taxonomies -> Create taxonomy. Name the taxonomy as "graph". Add following categories, `line`, `bar`, `radar`, `pie`, `polarArea`, `doughnut`, by clicking "Add parent category". After you have finished, your "graph" taxonomy should look like this:
 ![graph](/doc/images/graph.png)
 4. Create a new content type named "Chart" in WCH. Create an element under type "Category" in "Element palette" labeled as "type" in "Properties". In "Custom desplay", choose Select category -> Graph -> Graph.
-5. Create a new content with "Chart" content type. In the "type" dropdown menu, select `bar` as our chart type. 
+5. Create a new content with "Chart" content type. In the "type" dropdown menu, select `bar` as our chart type.
 6. Create a layout in your Oslo project. In the root directory of your Oslo site, run the following commands to configure your WCH tenant info and create a layout with type "Chart":
 ```
 wchtools init
 npm run create-layout -- --type "Chart"
 ```
 6. Deploy your newly created layout to WCH tenant. After you created your layout locally, you have to deploy it to WCH make it live. In the root directory of your Oslo site, run `npm run build-deploy`
-7. Create a new page that contains the new layout. In your "Site manager" of your WCH site, add a "Standard page" named "Chart" with content you created in Step 4. 
+7. Create a new page that contains the new layout. In your "Site manager" of your WCH site, add a "Standard page" named "Chart" with content you created in Step 4.
 8. Implement your code in the newly created component. In `src/app/layouts/chart/chartLayout.html`, replace the original code with following code:
 ```
 <div class="chart-component">
