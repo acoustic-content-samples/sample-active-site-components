@@ -8,10 +8,8 @@ This repository contains a set of active sample site components to showcase how 
 - [Sample Screenshots](#sample-screenshots)
 - [Prerequisites](#prerequisites)
 - [Install and deploy the sample](#install-and-deploy-the-sample)
-  - [Download the packages](#download-the-packages)
   - [Configure your Wchtools](#configure-your-wchtools)
-  - [Install the package content-artifacts](#install-the-package-content-artifacts)
-  - [Install the package site-application-files](#install-the-package-site-application-files)
+  - [Install the package content-artifacts and  site-application-files](#clone-and-install-the-sample-content-artifacts-and-site-application-files)
   - [Build and Deploy your components](#build-and-deploy-your-components)
 - [Edit your content in WCH](#edit-your-content-in-wch)
 - [Samples go live](#samples-go-live)
@@ -47,7 +45,7 @@ You could see what example plugin components look like here:
 
 ### Clone and install the sample content-artifacts and site-application-files
 * Change the command line directory to site application's root directory (i.e. wch-site-application). If you haven't already done so, perform all of the required installation steps for the site application repo.
-* Using the Git URL to the sample-web-components repository, run this command to copy the needed sample site-application-files and update the layout settings for the new component.
+* Using the Git URL to the sample-active-components repository, run this command to copy the needed sample site-application-files and update the layout settings for the new component.
 ```
 npm run install-layouts-from-git https://github.com/ibm-wch/wch-site-application.git
 ```
