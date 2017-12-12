@@ -47,7 +47,7 @@ You could see what example plugin components look like here:
 * Change the command line directory to site application's root directory (i.e. wch-site-application). If you haven't already done so, perform all of the required installation steps for the site application repo.
 * Using the Git URL to the sample-active-components repository, run this command to copy the needed sample site-application-files and update the layout settings for the new component.
 ```
-npm run install-layouts-from-git https://github.com/ibm-wch/wch-site-application.git
+npm run install-layouts-from-git https://github.com/ibm-wch/sample-active-site-components.git
 ```
 
 ### Build and Deploy your components
