@@ -1,8 +1,8 @@
-# sample-active-site-components
+# sample-wca-form-components
 
-This repository contains a set of active sample site components to showcase how to implement custom components within Watson Content Hub Sites feature. The samples include a Youtube video integration, a charting smaple with Chart.js, and an Iframe app.
+This repository contains a set of sample site components to showcase how to integrate Watson Campaign Automation (WCA) forms into the Watson Content Hub Sites feature. The samples include two techniques: iFrame inclusion, and copying a WCA form into a new WCH component.
 
-## Table of Contents
+## Table of contents
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Sample Screenshots](#sample-screenshots)
@@ -11,348 +11,104 @@ This repository contains a set of active sample site components to showcase how 
   - [Configure your Wchtools](#configure-your-wchtools)
   - [Install the package content-artifacts and  site-application-files](#clone-and-install-the-sample-content-artifacts-and-site-application-files)
   - [Build and Deploy your components](#build-and-deploy-your-components)
-- [Edit your content in WCH](#edit-your-content-in-wch)
+- [Add an iFrame form to a page](#add-an-iframe-form-to-a-page)
+- [Add a native form to a page](#add-a-native-form-to-a-page)
+  - [1. Parse the WCA form](#parse-the-wca-form)
+  - [2. Update the sample form with your WCA information](#update-the-sample-form-with-your-wca-information)
+  - [3. Deploy your WCA form component](#deploy-your-wca-form-component)
+  - [4. Add your WCA form component to a page](#add-your-wca-form-component-to-a-page)
 - [Samples go live](#samples-go-live)
-- [Appendix - Alternative Step-by-step Tutorial without installable packages](#appendix-alternative-step-by-step-tutorial-without-installable-packages)
-  - [Youtube Player](#youtube-player)
-  - [Charts](#charts)
-  - [Iframe](#iframe)
 - [License](#license)
 
 ## Introduction
-This sample repository provides three example plugin components for your Oslo sites. It includes a Youtube component, a Chart component, and an Iframe component. With the Youtube component, you can embed your favorite Youtube videos in your Oslo sites. With the Chart component, you can create your own chart based on your customized data leveraging the ng2-charts library. With the Iframe component, you can display any websites in a customized iframe window. To enable these 3 components, you have to install the packages `content-artifacts` and package `site-application-files` by following the steps below.
-There are two options to installing the samples - running a set of commands to just copy the files or following a step by step tutorial to learn how to build the samples.
+This sample repository provides two example plugin components for your WCH site. It includes an iFrame component, and a native WCA form component. With the iFrame component, you can display any WCA website in a customized iframe window. With the native form component, you can create your WCA forms in a new WCH component.  To enable these 3 components, you have to install the packages `content-artifacts` and package `site-application-files` by following the steps below.
 
-You could see what example plugin components look like here:
-### Youtube component
-![youtube example](/doc/images/video_example.png)
-### Chart component
-![chart example](/doc/images/chart_example.png)
-### Iframe component
-![iframe example](/doc/images/iframe_example.png)
+## Sample screenshots
+You can see what example plugin components look like here:
+### iFrame component
+![iFrame example](/doc/images/iframeExample.png)
+### Native form component
+![native example](/doc/images/nativeExample.png)
 
 ## Prerequisites
 * A WCH tenant in Trial or Standard Tier
 * Latest wch-site-application source (see: https://github.com/ibm-wch/wch-site-application)
 * Wchtools-cli v2.0.3 or above
-* Node.js v6.11.1 or above  
+* Node.js v6.11.1 or above
 
 ## Install and deploy the sample
 
-### Configure your Wchtools
+### Configure your wchtools
 * Get your WCH tenant API URL. Go to your WCH homepage -> YOUR USERNAME tab on top bar -> Hub information -> API URL. Copy the URL.
 * Run `wchtools init` in your command line. Enter your username and API URL to configure the wchtools
 
 ### Clone and install the sample content-artifacts and site-application-files
-* Change the command line directory to site application's root directory (i.e. wch-site-application). If you haven't already done so, perform all of the required installation steps for the site application repo.
-* Using the Git URL to the sample-active-components repository, run this command to copy the needed sample site-application-files and update the layout settings for the new component.
+* Change the command line directory to site application's root directory (i.e. wch-site-application). If you haven't already done so, perform all of the required installation steps for the site application repository.
+* Using the Git URL to the sample-wca-form-components repository, run this command to copy the needed sample site-application-files and update the layout settings for the new components.
 ```
-npm run install-layouts-from-git https://github.com/ibm-wch/sample-active-site-components.git
+npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-components.git
 ```
 
-### Build and Deploy your components
+### Build and deploy your components
 * From within the wch-site-application directory run:
-* Run `npm run build` to compile the project. Make sure there is no error during the build process.
-* Run `npm run deploy` to your WCH tenant. After that, you can see your changes in your WCH live site.
+* `npm run build` to compile the project. Make sure there is no error during the build process.
+* `npm run deploy` to your WCH tenant. After that, you can see your changes in your WCH live site.
 
+## Add an iFrame form to a page
+* Copy the URL to your form from WCA:
+![copy form URL](/doc/images/copyFormURL.png)
+* Create page
+* Configure
+![configure iframe](/doc/images/configureIframe.png)
+* View
+![iFrame example](/doc/images/iframeExample.png)
 
-## Edit your content in WCH
-* Go to Your WCH homepage -> Content -> My Content and assets. You will see the sample content there.
-![sample content](/doc/images/content.png)
-* Click on one of contents. You would see our preset values in content. If you want to use your customized value in content, please click on "Create draft" to edit the content.
-* For details about the meaning of each value in sample content, please refer to the Appendix tutorial.
+## Add a native form to a page
+
+Embed a WCA form directly into a WCH page by adding the form directly to a component. Once you have the POST action URL and parameters from your WCA form, just replace the sample form in _src/app/layouts/native-wca-form/nativeWcaFormLayout.html_, using the following steps:
+
+### 1. Parse the WCA form
+* Go directly to your WCA form in a browser:
+![form](/doc/images/form.png)
+* Inspect the form using your developer tools, to get the POST action url (ignore URL parameters):
+![POST URL](/doc/images/postURL.png)
+* Inspect the form input fields, and gather the type, name and value for each one:
+![form inputs](/doc/images/formInputs.png)
+
+The sample form information:
+* action URL: _/org/sports/sign-up_
+* form input elements:
+| Type     | Name      | Value                |
+| -------- |:---------:|:--------------------:|
+| text     | COLUMN22  | N/A                  |
+| text     | COLUMN28  | N/A                  |
+| text     | EMAIL     | N/A                  |
+| radio    | COLUMN92  | Yes                  |
+| radio    | COLUMN92  | No                   |
+| checkbox | COLUMN111 | Team Sports          |
+| checkbox | COLUMN111 | Roller Sports        |
+| checkbox | COLUMN111 | Fishing & Hunting    |
+| checkbox | COLUMN111 | Games & Toys         |
+| checkbox | COLUMN111 | Golf & Racket Sports |
+
+### 2. Update the sample form with your WCA information
+* TODO
+
+### 3. Deploy your WCA form component
+* From within the wch-site-application directory run `npm run build-deploy`
+
+### 4. Add your WCA form component to a page
+* Create page
+* Configure
+![configure native](/doc/images/configureNative.png)
+* View
+![native example](/doc/images/nativeExample.png)
 
 ## Samples go live
 * Go to Your WCH homepage -> YOUR USERNAME on the top bar -> Hub information.
 * You could view your newest site by clicking "Live site".
 
-## Appendix - Alternative Step-by-step Tutorial without installable packages
-
-* In this section, we will include the complete tutorial to create 3 sample components from scratch. It is not required if you choose to install packages above.
-
-### Youtube Player
-1. Find Video ID for selected Youtube video. Go to https://www.youtube.com/. Find your favorite video and get the videoID for that video. For example, if you want to play this video, https://www.youtube.com/watch?v=DC4dRht4Z9c, in your Oslo site, the video ID for this video would be `DC4dRht4Z9c` in the URL parameters.
-2. Create a new content type named "Youtube" in WCH. Create elements under type "Text" in "Element palette" labeled as "videoID", and under type "Toggle" in "Element palette" labeled as "showYoutubeLogo".
-The type should look like in this way:
-![youtube type](/doc/images/youtube.png)
-3. Create new content with the "Youtube" content type. In the "videoID" field, input your video ID from Step1. "showYoutubeLogo" would define whether the official "Youtube" logo shows up in your customized player.
-4. Create a layout in your Oslo project. In the root directory of your Oslo site, run the following commands to configure your WCH tenant info and create a layout with type "Youtube":
-```
-wchtools init
-npm run create-layout -- --type "Youtube"
-```
-5. Deploy your newly created layout to WCH tenant. After you created your layout locally, you have to deploy it to WCH make it live. In the root directory of your Oslo site, run `npm run build-deploy`
-6. Create a new page that contains the new layout. In your "Site manager" of your WCH site, add a "Standard page" named "Video" with content you created in Step 3.
-7. Implement your code in newly created component. In `src/app/layouts/youtube/youtubeLayout.html`, replace the original code with following code:
-```
-<div class="ytcomponent" [id]="(onRenderingContext | async).id">
-	<h3>Youtube Sample Video - IBM Watson Content Hub Demo Video</h3>
-	<div class="video-container">
-		<iframe id="ytplayer" type="text/html" width="720" height="405" [src]="url" frameborder="0" allowfullscreen></iframe>
-	</div>
-</div>
-```
-In `src/app/layouts/youtube/youtubeLayout.scss`, add this code:
-```
-.ytcomponent
-{
-	text-align: center;
-	padding-top: 35px;
-	overflow: hidden;
-}
-.video-container
-{
-	padding-bottom: 56.25%;
-}
-.video-container iframe {
-	width: 100%;
-	max-height: 405px;
-	max-width: 720px;
-}
-```
-In `src/app/layouts/youtube/youtubeLayout.ts`, add this line in the top of file:
-```
-import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
-```
-In the "YoutubeLayoutComponent" class, please change your class to the following code:
-```
-export class YoutubeLayoutComponent extends TypeYoutubeComponent {
-	url: SafeResourceUrl;
-	baseURL: string;
-
-    constructor(private sanitizer: DomSanitizer) {
-        super();
-		this.safeSubscribe(this.onVideoid, (id) => {
-    		this.safeSubscribe(this.onShowyoutubelogo, (showLogo) => {
-        		if (showLogo === false)
-        		{
-        		    this.baseURL = 'https://www.youtube.com/embed/' + id + '?modestbranding=1';
-        		}
-        		else
-        		{
-        			this.baseURL = 'https://www.youtube.com/embed/' + id;
-        		}
-        		this.url =  this.sanitizer.bypassSecurityTrustResourceUrl(this.baseURL);
-	        });
-        });
-    }
-}
-```
-8. Test your component. After you finished the first 7 steps, you could test either locally by running `npm start`, or remotely by running `npm run build-deploy`.
-
-### Charts
-
-1. Install ng2-charts (https://github.com/valor-software/ng2-charts) and Chart.js packages. In your root directory of your Oslo site, run this command to install pacakges:
-```
-npm install ng2-charts --save
-```
-2. Import ChartsModule in sample.module.ts. In {root directory of Oslo project}/src/app/sample.module.ts, add ChartsModule in this way:
-```
-import { ChartsModule } from 'ng2-charts/ng2-charts';
-
-export const SAMPLE_MODULE = [
-	ChartsModule
-];
-```
-3. Create a new Taxonomy that contains chart type. Chart.js supports 6 different chart types. By creating a new Taxonomy named "graph", you can manage your chart type in your WCH tenant. Go to Your WCH Homepage -> Content Model -> Taxonomies -> Create taxonomy. Name the taxonomy as "graph". Add following categories, `line`, `bar`, `radar`, `pie`, `polarArea`, `doughnut`, by clicking "Add parent category". After you have finished, your "graph" taxonomy should look like this:
-![graph](/doc/images/graph.png)
-4. Create a new content type named "Chart" in WCH. Create an element under type "Category" in "Element palette" labeled as "type" in "Properties". In "Custom desplay", choose Select category -> Graph -> Graph.
-5. Create a new content with "Chart" content type. In the "type" dropdown menu, select `bar` as our chart type.
-6. Create a layout in your Oslo project. In the root directory of your Oslo site, run the following commands to configure your WCH tenant info and create a layout with type "Chart":
-```
-wchtools init
-npm run create-layout -- --type "Chart"
-```
-6. Deploy your newly created layout to WCH tenant. After you created your layout locally, you have to deploy it to WCH make it live. In the root directory of your Oslo site, run `npm run build-deploy`
-7. Create a new page that contains the new layout. In your "Site manager" of your WCH site, add a "Standard page" named "Chart" with content you created in Step 4.
-8. Implement your code in the newly created component. In `src/app/layouts/chart/chartLayout.html`, replace the original code with following code:
-```
-<div class="chart-component">
-	<div [id]="(onRenderingContext | async).id" class="row">
-		<h2>Sample Radar Chart - Chart.js</h2>
-		<div class="chart" style="display: block;">
-			<canvas baseChart width="400" height="400"
-				[datasets]="chartData"
-				[labels]="chartLabels"
-				[options]="chartOptions"
-				[colors]="chartColors"
-				[legend]="chartLegend"
-				[chartType]="chartType"
-				(chartClick)="chartClicked($event)"></canvas>
-		</div>
-		<div class="table-container" style="overflow-x:auto;">
-			<table class="table table-responsive table-condensed">
-				<tr>
-					<th *ngFor="let label of chartLabels">{{label}}</th>
-				</tr>
-				<tr *ngFor="let d of chartData">
-					<td *ngFor="let label of chartLabels; let j=index">{{d && d.data[j]}}</td>
-				</tr>
-			</table>
-		</div>
-	</div>
-</div>
-
-```
-In `src/app/layouts/chart/chartLayout.scss`, add this code:
-```
-.row
-{
-	padding: 30px;
-	text-align: center;
-	max-width: 800px;
-	margin-right: auto;
-	margin-left: auto;
-}
-.chart
-{
-	padding-top: 50px;
-}
-```
-In `src/app/layouts/chart/chartLayout.ts`, add these two lines in the top of file:
-```
-import { UtilsService } from '../../common/utils/utils.service';
-import { OnInit } from '@angular/core';
-```
-In the "ChartLayoutComponent" class, please change your class to the following code:
-```
-export class ChartLayoutComponent extends TypeChartComponent implements OnInit {
-    public chartData:Array<any> = [
-	{data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-	{data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'},
-	{data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C'}
-];
-	public chartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-	public chartOptions:any = {
-	    responsive: true
-	};
-	public chartLegend:boolean = true;
-	//If you want to set your Chart type in WCH
-	public chartType:string;
-	//If you want to set your Chart type in code
-    //public chartType:string = 'bar';
-
-    constructor(public utilService: UtilsService) {
-        super();
-	}
-    ngOnInit()
-	{
-	    this.chartType = this.utilService.getFirstCategory(this.renderingContext, 'type');
-	}
-    // function called when you click on the chart
-	public chartClicked(e:any):void {
-		console.log(e);
-	}
-}
-```
-`chartData` stores all the data you want to plot in your chart. `chartLabels` would label your data in your Chart. `chartLegend` defines whether you would like to show a legend in your chart. `chartType` defines the type of chart you want to use for your chart. It would be one of 6 types of charts: `line`, `bar`, `radar`, `pie`, `polarArea`, `doughnut`. You can changed your type in the content you created in the Step 5 in WCH. `chartClicked` is a function that would become active if there is mouse click action on your chart. You can customize the click event function here.
-
-Note: If you want to customize the color of your Chart, you can insert this code in your `ChartLayoutComponent` class:
-```
-/* Comment out chartColors if you only want to use default colors */
-public chartColors:Array<any> = [
-	{ // grey
-	backgroundColor: 'rgba(148,159,177,0.2)',
-	borderColor: 'rgba(148,159,177,1)',
-	pointBackgroundColor: 'rgba(148,159,177,1)',
-	pointBorderColor: '#fff',
-	pointHoverBackgroundColor: '#fff',
-	pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-	},
-	{ // dark grey
-	backgroundColor: 'rgba(77,83,96,0.2)',
-	borderColor: 'rgba(77,83,96,1)',
-	pointBackgroundColor: 'rgba(77,83,96,1)',
-	pointBorderColor: '#fff',
-	pointHoverBackgroundColor: '#fff',
-	pointHoverBorderColor: 'rgba(77,83,96,1)'
-	},
-	{ // grey
-	backgroundColor: 'rgba(148,159,177,0.2)',
-	borderColor: 'rgba(148,159,177,1)',
-	pointBackgroundColor: 'rgba(148,159,177,1)',
-    pointBorderColor: '#fff',
-	pointHoverBackgroundColor: '#fff',
-	pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-	}
-];
-/* Comment out chartColors if you only want to use default colors */
-```
-9. Test your component. After you finished the first 8 steps, you could test either locally by running `npm start`, or remotely by running `npm run build-deploy`.
-You would see this chart in your Oslo site:
-![Bar Chart](/doc/images/bar.png)
-If you change your chart type to "line" in WCH, it will look like this:
-![Line Chart](/doc/images/line.png)
-Chart type "radar":
-![radar Chart](/doc/images/radar.png)
-Chart type "pie":
-![pie Chart](/doc/images/pie.png)
-Chart type "polarArea":
-![polarArea Chart](/doc/images/polarArea.png)
-Chart type "doughnut":
-![doughnut Chart](doc/images/doughnut.png)
-
-### Iframe
-This is an example of a content type you can create and add to your site. The first thing that needs to be done in order to add a new component is to the create the content type. The Iframe will have the following elements and settings:
-Name: **Iframe**
-
-Elements:
-**source**: link (required)
-
-**width**: number (required, minimum value of 0)
-
-**height**: number (required, minimum value of 0)
-
-After creating the content type, run the npm script in the Oslo project:
-
-`npm run create-layout -- --type Iframe`
-
-This will generate the template files for the new component.
-
-Then you will find the generated **src/app/components/iframe/abstractIframeComponent.ts** file. There will be three bounded elements:
-```
-@RenderingContextBinding()
-readonly source: Link;
-
-@RenderingContextBinding()
-readonly width: number;
-
-@RenderingContextBinding()
-readonly height: number;
-```
-These are the variables to use to access the content type data.
-
-To use these in the **src/app/layouts/iframe/iframeLayout.html** file, just reference them with the angular notation. Here is the layout that will be defined:
-```
-<div class="iframe-component" [id]="(onRenderingContext | async).id">
-	<h2>Iframe component example</h2>
-	<iframe class="wch-iframe" [src]="source.linkURL | formattedText:'resourceUrl'" [width]="width" [height]="height">
-		Sorry, your browser does not support inline frames.
-	</iframe>
-</div>
-```
-
-And the scss can be added to the **src/app/layouts/iframe/iframeLayout.scss** file:
-```
-.iframe-component
-{
-	text-align: center;
-	padding: 30px;
-}
-.wch-iframe {
-	resize: both;
-	max-width: 100%;
-}
-```
-And that is all the code that needs to be added to make a new Iframe component. The only thing left to do is build and deploy the code to the live site.
-To build, run: `npm run build`
-
-After a successful build, deploy: `npm run deploy`
-
-To add the new component to a page, go to WCH, create a new content item from the new Iframe content type, fill in the elements with your data, and add that content item to a page of the site.
-
-
 ## License
 See the included license file [License](license.txt) .
 
-[back to top](#sample-active-site-components)
+[back to top](#sample-wca-form-components)
