@@ -49,6 +49,7 @@ You could see what example plugin components look like here:
 ```
 npm run install-layouts-from-git https://github.com/ibm-wch/sample-active-site-components.git
 ```
+* Install required external modules for site-application-files. e.g: npm install ng2-charts --save
 
 ### Build and Deploy your components
 * From within the wch-site-application directory run:
