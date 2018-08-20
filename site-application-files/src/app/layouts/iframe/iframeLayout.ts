@@ -15,7 +15,7 @@
  *******************************************************************************/
 import {
     LayoutComponent
-} from 'ibm-wch-sdk-ng';
+} from '@ibm-wch-sdk/ng';
 import { Component } from '@angular/core';
 import { TypeIframeComponent } from './../../components/iframe/typeIframeComponent';
 

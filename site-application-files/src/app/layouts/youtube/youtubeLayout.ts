@@ -15,7 +15,7 @@
  *******************************************************************************/
 import {
     LayoutComponent
-} from 'ibm-wch-sdk-ng';
+} from '@ibm-wch-sdk/ng';
 import { Component } from '@angular/core';
 import { TypeYoutubeComponent } from './../../components/youtube/typeYoutubeComponent';
 import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
