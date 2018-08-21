@@ -15,10 +15,10 @@
  *******************************************************************************/
 import {
     LayoutComponent
-} from 'ibm-wch-sdk-ng';
+} from '@ibm-wch-sdk/ng';
 import { Component } from '@angular/core';
 import { TypeChartComponent } from './../../components/chart/typeChartComponent';
-import { UtilsService } from '../../common/utils/utils.service';
+import { UtilsService } from '@ibm-wch/components-ng-shared-utilities';
 import { OnInit } from '@angular/core';
 
 
@@ -62,5 +62,3 @@ export class ChartLayoutComponent extends TypeChartComponent implements OnInit {
 						console.log(e);
 					}
 }
-
-
